@@ -24,23 +24,6 @@ public class Person {
         this.personRecord = new String[]{this.id,firstName, lastName, String.valueOf(phoneNumber),address, String.valueOf(age)};
 
     }
-
-    public String getId() {
-        return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
     public String constructID(String firstName, String lastName){
         String subFirst = firstName.substring(0, 2);
         String subLast = lastName.substring(0, 2);
@@ -52,7 +35,4 @@ public class Person {
         return subFirst + subLast + convertInt;
     }
 
-    public String constructAccessID(){
-        return UUID.randomUUID().toString();
-    }
 }
